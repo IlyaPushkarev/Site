@@ -1,0 +1,1660 @@
+*,
+ul{
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+	height: 100vh;
+	width: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+.container{
+	max-width: 1163px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.button{
+	width: 180px;
+  padding: 15px 0;
+  background-color: #10c9c3;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.scrollup{
+  display: none;
+  width: 7vmin;
+  height: 7vmin;
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  color: white;
+  background-color: rgba(13, 165, 160,1);
+  z-index: 999;
+}
+.scrollup:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.scrollup span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*////////////////////////////////////HEADER//////////////////////////////////*/
+.header {
+  width: 100%;
+  background-image: url("../img/banner2.jpg");
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 85% 0%;
+  padding: 40px 0 190px 0;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 180px;
+}
+
+.menu-burger {
+  display: none;
+}
+
+.menu-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 24px;
+	text-transform: uppercase;
+
+}
+
+.menu-list li+li{padding-left: 2vw;}
+
+.menu-list a:hover{color: #10c9c3;}
+
+.menu-list a{
+  transition: color .3s;
+  color: #191919;
+}
+.content{
+	width: 50%;
+  margin-left: 50%;
+
+}
+.content h2{
+	color: #1d1d1d;
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-bottom: 35px;
+}
+.content p{
+	color: #787878;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+
+/*/////////////////////////////////////////ABOUT///////////////////////////////////////////*/
+.about {
+	padding: 97px 0 92px;
+}
+
+.about__wrapper {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.about h2{
+	color: #191919;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.about p{
+	color: #787878;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+  margin-bottom: 30px;
+}
+
+.signature {
+	width: 223px;
+	height: 57px;
+	background-image: url(../img/signature.png);
+	margin: 0 auto;
+}
+
+/*//////////////////////////////////SKILLS-LEVEL////////////////////////////*/
+.skills-level {
+  display: flex;
+  position: relative;
+}
+
+.skills-level .container{
+ position: absolute;
+ top: 50%;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ transform: translate(0%,-50%);
+}
+
+.progress-part {
+  height: 556px;
+  width: 50%;
+  background-color:#f8f9f9;
+}
+
+.photo-part {
+  width: 50%;
+  background-size: cover;
+  background-image: url("../img/skills-photo.jpg");
+  background-position: 70% 0;
+  background-repeat: no-repeat;
+}
+
+.progress__wrapper{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0%, -50%);
+  width: 40%;
+  background: #f8f9f9;
+}
+
+.progress__wrapper h2{
+	margin-bottom: 40px;
+	color: #171717;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 500;
+}
+.progress{
+	font: 12px Arial;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 35px;
+}
+
+.progress:last-child{
+  margin-bottom: 0;
+}
+
+.progress progress{
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	left: -777px;
+}
+
+.progress-bar{
+	overflow: hidden;
+	background: #ac92ec;
+	width: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.progress-value{
+	color: #000000;
+	display: block;
+	font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.progress-value:after{
+	margin-left: 30px;
+}
+
+.progress-bg{
+	background:  #e6e9ed;
+	position: relative;
+	height: 3px;
+	
+	overflow: hidden;
+}
+
+.progress-bar:after
+{
+
+  background-color: #10c9c3;
+  background-size: 40px 40px;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes progress_bar {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -40px 0;
+  }
+}
+
+.progress-bar
+{
+  transition: width 1s linear;
+}
+
+.progress-bar:after
+{
+  animation: progress_bar 0.8s linear infinite;
+}
+
+.progress progress[value="0"] + .progress-value:after {
+  content: "0%";
+}
+.progress progress[value="0"] ~ .progress-bg .progress-bar {
+  width: 0%;
+}
+
+.progress progress[value="1"] + .progress-value:after {
+  content: "1%";
+}
+.progress progress[value="1"] ~ .progress-bg .progress-bar {
+  width: 1%;
+}
+
+.progress progress[value="2"] + .progress-value:after {
+  content: "2%";
+}
+.progress progress[value="2"] ~ .progress-bg .progress-bar {
+  width: 2%;
+}
+
+.progress progress[value="3"] + .progress-value:after {
+  content: "3%";
+}
+.progress progress[value="3"] ~ .progress-bg .progress-bar {
+  width: 3%;
+}
+
+.progress progress[value="4"] + .progress-value:after {
+  content: "4%";
+}
+.progress progress[value="4"] ~ .progress-bg .progress-bar {
+  width: 4%;
+}
+
+.progress progress[value="5"] + .progress-value:after {
+  content: "5%";
+}
+.progress progress[value="5"] ~ .progress-bg .progress-bar {
+  width: 5%;
+}
+
+.progress progress[value="6"] + .progress-value:after {
+  content: "6%";
+}
+.progress progress[value="6"] ~ .progress-bg .progress-bar {
+  width: 6%;
+}
+
+.progress progress[value="7"] + .progress-value:after {
+  content: "7%";
+}
+.progress progress[value="7"] ~ .progress-bg .progress-bar {
+  width: 7%;
+}
+
+.progress progress[value="8"] + .progress-value:after {
+  content: "8%";
+}
+.progress progress[value="8"] ~ .progress-bg .progress-bar {
+  width: 8%;
+}
+
+.progress progress[value="9"] + .progress-value:after {
+  content: "9%";
+}
+.progress progress[value="9"] ~ .progress-bg .progress-bar {
+  width: 9%;
+}
+
+.progress progress[value="10"] + .progress-value:after {
+  content: "10%";
+}
+.progress progress[value="10"] ~ .progress-bg .progress-bar {
+  width: 10%;
+}
+
+.progress progress[value="11"] + .progress-value:after {
+  content: "11%";
+}
+.progress progress[value="11"] ~ .progress-bg .progress-bar {
+  width: 11%;
+}
+
+.progress progress[value="12"] + .progress-value:after {
+  content: "12%";
+}
+.progress progress[value="12"] ~ .progress-bg .progress-bar {
+  width: 12%;
+}
+
+.progress progress[value="13"] + .progress-value:after {
+  content: "13%";
+}
+.progress progress[value="13"] ~ .progress-bg .progress-bar {
+  width: 13%;
+}
+
+.progress progress[value="14"] + .progress-value:after {
+  content: "14%";
+}
+.progress progress[value="14"] ~ .progress-bg .progress-bar {
+  width: 14%;
+}
+
+.progress progress[value="15"] + .progress-value:after {
+  content: "15%";
+}
+.progress progress[value="15"] ~ .progress-bg .progress-bar {
+  width: 15%;
+}
+
+.progress progress[value="16"] + .progress-value:after {
+  content: "16%";
+}
+.progress progress[value="16"] ~ .progress-bg .progress-bar {
+  width: 16%;
+}
+
+.progress progress[value="17"] + .progress-value:after {
+  content: "17%";
+}
+.progress progress[value="17"] ~ .progress-bg .progress-bar {
+  width: 17%;
+}
+
+.progress progress[value="18"] + .progress-value:after {
+  content: "18%";
+}
+.progress progress[value="18"] ~ .progress-bg .progress-bar {
+  width: 18%;
+}
+
+.progress progress[value="19"] + .progress-value:after {
+  content: "19%";
+}
+.progress progress[value="19"] ~ .progress-bg .progress-bar {
+  width: 19%;
+}
+
+.progress progress[value="20"] + .progress-value:after {
+  content: "20%";
+}
+.progress progress[value="20"] ~ .progress-bg .progress-bar {
+  width: 20%;
+}
+
+.progress progress[value="21"] + .progress-value:after {
+  content: "21%";
+}
+.progress progress[value="21"] ~ .progress-bg .progress-bar {
+  width: 21%;
+}
+
+.progress progress[value="22"] + .progress-value:after {
+  content: "22%";
+}
+.progress progress[value="22"] ~ .progress-bg .progress-bar {
+  width: 22%;
+}
+
+.progress progress[value="23"] + .progress-value:after {
+  content: "23%";
+}
+.progress progress[value="23"] ~ .progress-bg .progress-bar {
+  width: 23%;
+}
+
+.progress progress[value="24"] + .progress-value:after {
+  content: "24%";
+}
+.progress progress[value="24"] ~ .progress-bg .progress-bar {
+  width: 24%;
+}
+
+.progress progress[value="25"] + .progress-value:after {
+  content: "25%";
+}
+.progress progress[value="25"] ~ .progress-bg .progress-bar {
+  width: 25%;
+}
+
+.progress progress[value="26"] + .progress-value:after {
+  content: "26%";
+}
+.progress progress[value="26"] ~ .progress-bg .progress-bar {
+  width: 26%;
+}
+
+.progress progress[value="27"] + .progress-value:after {
+  content: "27%";
+}
+.progress progress[value="27"] ~ .progress-bg .progress-bar {
+  width: 27%;
+}
+
+.progress progress[value="28"] + .progress-value:after {
+  content: "28%";
+}
+.progress progress[value="28"] ~ .progress-bg .progress-bar {
+  width: 28%;
+}
+
+.progress progress[value="29"] + .progress-value:after {
+  content: "29%";
+}
+.progress progress[value="29"] ~ .progress-bg .progress-bar {
+  width: 29%;
+}
+
+.progress progress[value="30"] + .progress-value:after {
+  content: "30%";
+}
+.progress progress[value="30"] ~ .progress-bg .progress-bar {
+  width: 30%;
+}
+
+.progress progress[value="31"] + .progress-value:after {
+  content: "31%";
+}
+.progress progress[value="31"] ~ .progress-bg .progress-bar {
+  width: 31%;
+}
+
+.progress progress[value="32"] + .progress-value:after {
+  content: "32%";
+}
+.progress progress[value="32"] ~ .progress-bg .progress-bar {
+  width: 32%;
+}
+
+.progress progress[value="33"] + .progress-value:after {
+  content: "33%";
+}
+.progress progress[value="33"] ~ .progress-bg .progress-bar {
+  width: 33%;
+}
+
+.progress progress[value="34"] + .progress-value:after {
+  content: "34%";
+}
+.progress progress[value="34"] ~ .progress-bg .progress-bar {
+  width: 34%;
+}
+
+.progress progress[value="35"] + .progress-value:after {
+  content: "35%";
+}
+.progress progress[value="35"] ~ .progress-bg .progress-bar {
+  width: 35%;
+}
+
+.progress progress[value="36"] + .progress-value:after {
+  content: "36%";
+}
+.progress progress[value="36"] ~ .progress-bg .progress-bar {
+  width: 36%;
+}
+
+.progress progress[value="37"] + .progress-value:after {
+  content: "37%";
+}
+.progress progress[value="37"] ~ .progress-bg .progress-bar {
+  width: 37%;
+}
+
+.progress progress[value="38"] + .progress-value:after {
+  content: "38%";
+}
+.progress progress[value="38"] ~ .progress-bg .progress-bar {
+  width: 38%;
+}
+
+.progress progress[value="39"] + .progress-value:after {
+  content: "39%";
+}
+.progress progress[value="39"] ~ .progress-bg .progress-bar {
+  width: 39%;
+}
+
+.progress progress[value="40"] + .progress-value:after {
+  content: "40%";
+}
+.progress progress[value="40"] ~ .progress-bg .progress-bar {
+  width: 40%;
+}
+
+.progress progress[value="41"] + .progress-value:after {
+  content: "41%";
+}
+.progress progress[value="41"] ~ .progress-bg .progress-bar {
+  width: 41%;
+}
+
+.progress progress[value="42"] + .progress-value:after {
+  content: "42%";
+}
+.progress progress[value="42"] ~ .progress-bg .progress-bar {
+  width: 42%;
+}
+
+.progress progress[value="43"] + .progress-value:after {
+  content: "43%";
+}
+.progress progress[value="43"] ~ .progress-bg .progress-bar {
+  width: 43%;
+}
+
+.progress progress[value="44"] + .progress-value:after {
+  content: "44%";
+}
+.progress progress[value="44"] ~ .progress-bg .progress-bar {
+  width: 44%;
+}
+
+.progress progress[value="45"] + .progress-value:after {
+  content: "45%";
+}
+.progress progress[value="45"] ~ .progress-bg .progress-bar {
+  width: 45%;
+}
+
+.progress progress[value="46"] + .progress-value:after {
+  content: "46%";
+}
+.progress progress[value="46"] ~ .progress-bg .progress-bar {
+  width: 46%;
+}
+
+.progress progress[value="47"] + .progress-value:after {
+  content: "47%";
+}
+.progress progress[value="47"] ~ .progress-bg .progress-bar {
+  width: 47%;
+}
+
+.progress progress[value="48"] + .progress-value:after {
+  content: "48%";
+}
+.progress progress[value="48"] ~ .progress-bg .progress-bar {
+  width: 48%;
+}
+
+.progress progress[value="49"] + .progress-value:after {
+  content: "49%";
+}
+.progress progress[value="49"] ~ .progress-bg .progress-bar {
+  width: 49%;
+}
+
+.progress progress[value="50"] + .progress-value:after {
+  content: "50%";
+}
+.progress progress[value="50"] ~ .progress-bg .progress-bar {
+  width: 50%;
+}
+
+.progress progress[value="51"] + .progress-value:after {
+  content: "51%";
+}
+.progress progress[value="51"] ~ .progress-bg .progress-bar {
+  width: 51%;
+}
+
+.progress progress[value="52"] + .progress-value:after {
+  content: "52%";
+}
+.progress progress[value="52"] ~ .progress-bg .progress-bar {
+  width: 52%;
+}
+
+.progress progress[value="53"] + .progress-value:after {
+  content: "53%";
+}
+.progress progress[value="53"] ~ .progress-bg .progress-bar {
+  width: 53%;
+}
+
+.progress progress[value="54"] + .progress-value:after {
+  content: "54%";
+}
+.progress progress[value="54"] ~ .progress-bg .progress-bar {
+  width: 54%;
+}
+
+.progress progress[value="55"] + .progress-value:after {
+  content: "55%";
+}
+.progress progress[value="55"] ~ .progress-bg .progress-bar {
+  width: 55%;
+}
+
+.progress progress[value="56"] + .progress-value:after {
+  content: "56%";
+}
+.progress progress[value="56"] ~ .progress-bg .progress-bar {
+  width: 56%;
+}
+
+.progress progress[value="57"] + .progress-value:after {
+  content: "57%";
+}
+.progress progress[value="57"] ~ .progress-bg .progress-bar {
+  width: 57%;
+}
+
+.progress progress[value="58"] + .progress-value:after {
+  content: "58%";
+}
+.progress progress[value="58"] ~ .progress-bg .progress-bar {
+  width: 58%;
+}
+
+.progress progress[value="59"] + .progress-value:after {
+  content: "59%";
+}
+.progress progress[value="59"] ~ .progress-bg .progress-bar {
+  width: 59%;
+}
+
+.progress progress[value="60"] + .progress-value:after {
+  content: "60%";
+}
+.progress progress[value="60"] ~ .progress-bg .progress-bar {
+  width: 60%;
+}
+
+.progress progress[value="61"] + .progress-value:after {
+  content: "61%";
+}
+.progress progress[value="61"] ~ .progress-bg .progress-bar {
+  width: 61%;
+}
+
+.progress progress[value="62"] + .progress-value:after {
+  content: "62%";
+}
+.progress progress[value="62"] ~ .progress-bg .progress-bar {
+  width: 62%;
+}
+
+.progress progress[value="63"] + .progress-value:after {
+  content: "63%";
+}
+.progress progress[value="63"] ~ .progress-bg .progress-bar {
+  width: 63%;
+}
+
+.progress progress[value="64"] + .progress-value:after {
+  content: "64%";
+}
+.progress progress[value="64"] ~ .progress-bg .progress-bar {
+  width: 64%;
+}
+
+.progress progress[value="65"] + .progress-value:after {
+  content: "65%";
+}
+.progress progress[value="65"] ~ .progress-bg .progress-bar {
+  width: 65%;
+}
+
+.progress progress[value="66"] + .progress-value:after {
+  content: "66%";
+}
+.progress progress[value="66"] ~ .progress-bg .progress-bar {
+  width: 66%;
+}
+
+.progress progress[value="67"] + .progress-value:after {
+  content: "67%";
+}
+.progress progress[value="67"] ~ .progress-bg .progress-bar {
+  width: 67%;
+}
+
+.progress progress[value="68"] + .progress-value:after {
+  content: "68%";
+}
+.progress progress[value="68"] ~ .progress-bg .progress-bar {
+  width: 68%;
+}
+
+.progress progress[value="69"] + .progress-value:after {
+  content: "69%";
+}
+.progress progress[value="69"] ~ .progress-bg .progress-bar {
+  width: 69%;
+}
+
+.progress progress[value="70"] + .progress-value:after {
+  content: "70%";
+}
+.progress progress[value="70"] ~ .progress-bg .progress-bar {
+  width: 70%;
+}
+
+.progress progress[value="71"] + .progress-value:after {
+  content: "71%";
+}
+.progress progress[value="71"] ~ .progress-bg .progress-bar {
+  width: 71%;
+}
+
+.progress progress[value="72"] + .progress-value:after {
+  content: "72%";
+}
+.progress progress[value="72"] ~ .progress-bg .progress-bar {
+  width: 72%;
+}
+
+.progress progress[value="73"] + .progress-value:after {
+  content: "73%";
+}
+.progress progress[value="73"] ~ .progress-bg .progress-bar {
+  width: 73%;
+}
+
+.progress progress[value="74"] + .progress-value:after {
+  content: "74%";
+}
+.progress progress[value="74"] ~ .progress-bg .progress-bar {
+  width: 74%;
+}
+
+.progress progress[value="75"] + .progress-value:after {
+  content: "75%";
+}
+.progress progress[value="75"] ~ .progress-bg .progress-bar {
+  width: 75%;
+}
+
+.progress progress[value="76"] + .progress-value:after {
+  content: "76%";
+}
+.progress progress[value="76"] ~ .progress-bg .progress-bar {
+  width: 76%;
+}
+
+.progress progress[value="77"] + .progress-value:after {
+  content: "77%";
+}
+.progress progress[value="77"] ~ .progress-bg .progress-bar {
+  width: 77%;
+}
+
+.progress progress[value="78"] + .progress-value:after {
+  content: "78%";
+}
+.progress progress[value="78"] ~ .progress-bg .progress-bar {
+  width: 78%;
+}
+
+.progress progress[value="79"] + .progress-value:after {
+  content: "79%";
+}
+.progress progress[value="79"] ~ .progress-bg .progress-bar {
+  width: 79%;
+}
+
+.progress progress[value="80"] + .progress-value:after {
+  content: "80%";
+}
+.progress progress[value="80"] ~ .progress-bg .progress-bar {
+  width: 80%;
+}
+
+.progress progress[value="81"] + .progress-value:after {
+  content: "81%";
+}
+.progress progress[value="81"] ~ .progress-bg .progress-bar {
+  width: 81%;
+}
+
+.progress progress[value="82"] + .progress-value:after {
+  content: "82%";
+}
+.progress progress[value="82"] ~ .progress-bg .progress-bar {
+  width: 82%;
+}
+
+.progress progress[value="83"] + .progress-value:after {
+  content: "83%";
+}
+.progress progress[value="83"] ~ .progress-bg .progress-bar {
+  width: 83%;
+}
+
+.progress progress[value="84"] + .progress-value:after {
+  content: "84%";
+}
+.progress progress[value="84"] ~ .progress-bg .progress-bar {
+  width: 84%;
+}
+
+.progress progress[value="85"] + .progress-value:after {
+  content: "85%";
+}
+.progress progress[value="85"] ~ .progress-bg .progress-bar {
+  width: 85%;
+}
+
+.progress progress[value="86"] + .progress-value:after {
+  content: "86%";
+}
+.progress progress[value="86"] ~ .progress-bg .progress-bar {
+  width: 86%;
+}
+
+.progress progress[value="87"] + .progress-value:after {
+  content: "87%";
+}
+.progress progress[value="87"] ~ .progress-bg .progress-bar {
+  width: 87%;
+}
+
+.progress progress[value="88"] + .progress-value:after {
+  content: "88%";
+}
+.progress progress[value="88"] ~ .progress-bg .progress-bar {
+  width: 88%;
+}
+
+.progress progress[value="89"] + .progress-value:after {
+  content: "89%";
+}
+.progress progress[value="89"] ~ .progress-bg .progress-bar {
+  width: 89%;
+}
+
+.progress progress[value="90"] + .progress-value:after {
+  content: "90%";
+}
+.progress progress[value="90"] ~ .progress-bg .progress-bar {
+  width: 90%;
+}
+
+.progress progress[value="91"] + .progress-value:after {
+  content: "91%";
+}
+.progress progress[value="91"] ~ .progress-bg .progress-bar {
+  width: 91%;
+}
+
+.progress progress[value="92"] + .progress-value:after {
+  content: "92%";
+}
+.progress progress[value="92"] ~ .progress-bg .progress-bar {
+  width: 92%;
+}
+
+.progress progress[value="93"] + .progress-value:after {
+  content: "93%";
+}
+.progress progress[value="93"] ~ .progress-bg .progress-bar {
+  width: 93%;
+}
+
+.progress progress[value="94"] + .progress-value:after {
+  content: "94%";
+}
+.progress progress[value="94"] ~ .progress-bg .progress-bar {
+  width: 94%;
+}
+
+.progress progress[value="95"] + .progress-value:after {
+  content: "95%";
+}
+.progress progress[value="95"] ~ .progress-bg .progress-bar {
+  width: 95%;
+}
+
+.progress progress[value="96"] + .progress-value:after {
+  content: "96%";
+}
+.progress progress[value="96"] ~ .progress-bg .progress-bar {
+  width: 96%;
+}
+
+.progress progress[value="97"] + .progress-value:after {
+  content: "97%";
+}
+.progress progress[value="97"] ~ .progress-bg .progress-bar {
+  width: 97%;
+}
+
+.progress progress[value="98"] + .progress-value:after {
+  content: "98%";
+}
+.progress progress[value="98"] ~ .progress-bg .progress-bar {
+  width: 98%;
+}
+
+.progress progress[value="99"] + .progress-value:after {
+  content: "99%";
+}
+.progress progress[value="99"] ~ .progress-bg .progress-bar {
+  width: 99%;
+}
+
+.progress progress[value="100"] + .progress-value:after {
+  content: "100%";
+}
+.progress progress[value="100"] ~ .progress-bg .progress-bar {
+  width: 100%;
+}
+
+/*/////////////////////////////////////SUCCESS//////////////////////////////////////////////////////////*/
+.success {
+  padding: 40px 0 50px;
+  background:  #10c9c3;
+}
+
+.success__wrapper {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.success__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  
+}
+.success-icon {
+  display: flex;
+  color: white;
+  font-size: 48px;
+  margin-right: 20px;
+  font-weight: 400;
+  
+}
+.success-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+.success-description p:first-child{
+  margin-bottom: 15px;
+}
+
+/*/////////////////////////////////////////WORKS/////////////////////////////////////*/
+.works .container{
+  max-width: none;
+  padding: 0 0 ;
+}
+
+.gallery__row,
+.gallery__row__revers{
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery__row > div,
+.gallery__row__revers > div{
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.gallery__row div:nth-child(1){background-image: url(../img/work-1.jpg);}
+.gallery__row div:nth-child(2){background-image: url(../img/work-2.jpg);}
+.gallery__row div:nth-child(3){background-image: url(../img/work-3.jpg);}
+.gallery__row div:nth-child(4){background-image: url(../img/work-4.jpg);}
+
+.gallery__row__revers div:nth-child(1){background-image: url(../img/work-5.jpg);}
+.gallery__row__revers div:nth-child(2){background-image: url(../img/work-6.jpg);}
+.gallery__row__revers div:nth-child(3){background-image: url(../img/work-7.jpg);}
+.gallery__row__revers div:nth-child(4){background-image: url(../img/work-1.jpg);}
+
+.photo{
+  flex: 1 1 auto;
+  cursor: pointer;
+  height: 20vw;
+  background: transparent;
+  position: relative;
+}
+.photo:hover{
+  background-color: rgba(0,0,0,.5);
+}
+
+.photo-cover span{
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  font-family: "icomoon";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.load__works{
+  width: 100%;
+  padding: 43px 0;
+  text-align: center;
+  background: #f5f5f5;
+  color: #8e8e8e;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn__wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn__wrapper div:last-child{
+  text-align: center;
+  display: none;
+}
+
+/*////////////////////////WORK-PROCCESS//////////////////////////*/
+.work-proccess{
+  padding: 64px;
+}
+.work-proccess_wrapepr{
+  text-align: center;
+}
+.work-proccess h2{
+  color: #191919;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.work-proccess  p{
+  color: #787878;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+  margin-bottom: 30px;
+}
+
+.video {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.work-proccess video{
+  display: block;
+  width:100%;
+  height: 100%;
+}
+
+.pause-btn{
+  display: block;
+  content: '';
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  background:  #10c9c3;
+}
+
+.pause-btn:before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  clip-path:polygon(0% 0%, 0% 100%, 100% 50%); 
+  top:50%;
+  left:55%;
+  transform:translate(-50%,-50%)
+}
+/*///////////////////////SKILLS/////////////////////////////////////*/
+.skills {
+  padding: 100px 113px;
+  background-color: #f5f5f5;
+}
+.skills__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.skill-item {
+  max-width: 33%;
+  flex: 1 1 auto;
+  padding: 0 5px;
+}
+.skill-item:first-child{
+  margin-bottom: 10vh;
+}
+.skill-item__photo {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+.skill-title {
+  margin-bottom: 15px;
+}
+.skill-description {
+}
+/*//////////////////////SLIDER-COMMENTS//////////////////////////////////////*/
+.slider {
+  background-color:  #10c9c3;
+}
+.slider-wrapper {
+  padding: 100px 170px;
+}
+
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.slick-dots button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  border-radius: 100%;
+  color: transparent;
+  background: white;
+  opacity: 0.8;
+}
+
+.slick-active button{
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+q {    
+ quotes: '\201c' '\201d'
+}
+
+q:before { 
+  content: open-quote;
+}
+
+q:after { 
+  content: close-quote;
+}
+
+.comment-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: white;
+}
+
+.comment-body {
+  display: block;
+  margin-bottom: 35px;
+
+}
+.comment-author {
+  margin-bottom: 55px;
+}
+/*////////////////////////////////CLIENTS//////////////////////////////////////*/
+.clients_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 60px 120px;
+}
+/*///////////////////////////////NEW-PROJECT-FORM///////////////////////////////*/
+.new-project-form {
+  padding: 100px 200px;
+  background-color: #f5f5f5;
+}
+
+.new-project-form h2{
+  text-align: center;
+  color: #191919;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.new-project-form p{
+  text-align: center;
+  color: #787878;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+  margin-bottom: 30px;
+}
+.order-form {
+  display: flex;
+  flex-direction: column;
+}
+.order-form__input,
+.order-form__textarea{
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+}
+
+.input-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-wrapper input{
+  min-width: 48%;
+}
+.order-form__textarea{
+  resize: none;
+}
+
+.order-form button{
+  align-self: center;
+}
+
+/*///////////////////////////FOOTER//////////////////////////////////*/
+footer{
+  padding: 100px 0;
+  background-color: black;
+}
+footer a {
+  color: grey;
+  line-height: 30px;
+}
+footer .container {
+  display: flex;
+  color: grey;
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.copyright {
+  min-width: 30%;
+}
+
+.copyright h3{
+  margin-bottom: 25px;
+  color: white;
+}
+.contacts {
+ min-width: 30%;
+}
+.tabs {
+  display: flex;
+  min-width: 25%;
+}
+
+.tabs-row{
+  display: flex;
+}
+.tabs a{
+  min-width: 35%;
+}
+.social {
+ min-width: 15%;
+}
+
+
+@media screen and (max-width: 800px){
+  /*////////////////HEADER///////////////////////*/
+  .header {
+    padding: 40px 0 90px 0;
+    background-size: auto; 
+    background-position: 65% 55%;
+  }
+
+  .navigation {
+    margin-bottom: 90px;
+  }
+
+  .menu-burger {
+    display: inline-block;
+    transition: transform .5s;
+    position: relative;
+  }
+
+  .menu-burger span {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 3px;
+  }
+
+  .burger-strip-2 {margin-bottom: 0;}
+  .burger-strip-3 {margin-bottom: 0;}
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-list li+li{padding-left: 0vw;}
+
+  .menu-list li{
+    width: 100%;
+    margin-bottom: 5vmin;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  .menu-list li:first-child{
+    margin-top: 5vmin;
+  }
+
+  .menu.adaptive{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+    background-color: #10c9c3;
+  }
+
+  .menu.adaptive .burger-strip-1{
+    display: none;
+  }
+
+  .menu.adaptive .burger-strip-2{
+    position: absolute;
+    transform: rotate(45deg);
+  }
+
+  .menu.adaptive .burger-strip-3{
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  .menu.adaptive a:hover{
+    color: white;
+  }
+  /*////////////////ABOUT///////////////////////////*/
+  .about{
+    padding: 40px 0 40px;
+  }
+  .about__wrapper{
+    width: 80%;
+  }
+  /*///////////////SKILLS-LEVEL////////////////////////////*/
+  .progress-part {
+    height: 456px;
+  }
+  /*/////////////////SUCCESS/////////////////////////*/
+  .success-icon{
+    margin-right: 0;
+  }
+  .success__item{
+    flex-direction: column;
+  }
+  .success-icon{
+    margin-bottom: 5vh;
+  }
+  .success-description{
+    align-items: center;
+  }
+  /*/////////////////////WORK-PROCCES////////////////////*/
+  .work-proccess {
+    padding: 40px 0;
+  }
+  .work-proccess h2 {
+    margin-bottom: 20px;
+
+  }
+  .video{
+    max-width: 600px;
+  }
+  /*/////////////////////SKILLS//////////////////////////*/
+  .skills {
+    padding: 40px 0;
+  }
+
+  .skill-item{
+    max-width: 50%;
+    margin-bottom: 10vh;
+  }
+
+  .skill-item:last-child,
+  .skill-item:nth-child(5){
+    margin-bottom: 0;
+  }
+
+  /*///////////////////////SLIDER-COMMENTS//////////////////*/
+  .slider-wrapper {
+    padding: 40px 80px;
+  }
+  .comment-body {
+    margin-bottom: 25px;
+  }
+  .comment-author {
+    margin-bottom: 35px;
+  }
+  /*////////////////////////////////CLIENTS//////////////////////////////////////*/
+  .clients_wrapper{
+    flex-wrap: wrap;
+    padding: 40px 0;
+  }
+  .clients_wrapper img{
+    margin-bottom: 5vh;
+  }
+
+  /*////////////////////////////FORM/////////////////////////////////*/
+  .new-project-form {
+    padding: 40px 0;
+  }
+  .new-project-form h2{
+    margin-bottom: 20px;
+  }
+  /*///////////////////////FOOTER////////////////////////*/
+  footer {
+    padding: 50px 0;
+  }
+  footer .container {
+    flex-wrap: wrap;
+  }
+
+  .footer-item {
+   text-align: center;}
+
+   .copyright{
+    margin-bottom: 10vh;
+  }
+  .copyright{
+    min-width: 50%;
+  }
+  .contacts{
+    min-width: 50%;
+  }
+  .tabs{
+    min-width: 50%;
+  }
+  .tabs a{
+    width: 50%;
+  }
+  .tabs a:nth-child(2n){
+    text-align: start;
+  }
+  
+  .social{
+    min-width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  /*//////////////////HEADER//////////////////////////*/
+  .header {
+    padding: 20px 0 50px 0;
+    background-size: auto; 
+    background-position: 100% 0%;
+  }
+  .navigation {
+    margin-bottom: 45px;
+  }
+  .content {
+    width: 100%;
+    margin-left: 0;
+    text-align: justify;
+    text-indent: 10px;
+  }
+
+  .content h2{
+    text-align: center;
+  }
+
+  .content .button{
+    margin: 0 auto;
+  }
+  .menu.adaptive{
+    width: 100vw;
+  }
+  /*///////////////////////ABOUT/////////////////////////////*/
+  .about {
+    padding: 20px 0 20px;
+  }
+  .about__wrapper {
+    width: 100%;
+  }
+  /*///////////////SKILLS-LEVEL////////////////////////////*/
+  .skills-level .container {
+    top: 0;
+    transform: translate(0%,0%);
+    /*z-index: 999;*/
+    opacity: 0.8;
+    background: #f8f9f9;
+  }
+  .progress-part {
+    display: none;
+  }
+  .photo-part{
+    height: 356px;
+    width: 100%;
+  }
+  .progress__wrapper {
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translate(0%, -50%); 
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  /*////////////////////SUCCESS///////////////////////////*/
+  .success {
+    padding: 20px 0;
+  }
+  .success__wrapper{
+    flex-flow: wrap;
+  }
+  .success__item {
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .success__item:first-child{
+    margin-bottom: 15vh;
+  }
+  /*////////////////////////WORKS////////////////////////////////*/
+  .gallery__row, .gallery__row__revers {
+    flex-flow: row wrap;
+  }
+  .photo{
+    width: 50%;
+    height: 40vw;
+  }
+  /*/////////////////////////SKILLS///////////////////////////////*/
+  .skill-item{
+    min-width: 100%;
+  }
+  .skill-item:nth-child(5){
+    margin-bottom: 10vh;
+  }
+  /*////////////////////////////////SLIDER////////////////////////////*/
+  .slider-wrapper {
+    padding: 20px 0;
+  }
+  .slick-dots li+li{
+    margin-left: 10px;
+  }
+  /*//////////////////////////FORM////////////////////////////////*/
+  .new-project-form {
+    padding: 40px 0;
+  }
+  .new-project-form h2 {
+    margin-bottom: 10px;
+  }
+  .input-wrapper {
+    flex-direction: column;
+  }
+  /*////////////////////FOOTER//////////////////////////////*/
+  footer{
+    padding: 40px 0;
+  }
+
+  .copyright,
+  .contacts{
+    min-width: 100%;
+    margin-bottom: 10vh;
+  }
+}
