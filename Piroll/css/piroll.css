@@ -9,6 +9,7 @@ html,
 body{
 	height: 100vh;
 	width: 100%;
+  font-family: 'Geologica', sans-serif;
 }
 
 a{
@@ -22,8 +23,9 @@ a{
 }
 
 .button{
+  display: block;
 	width: 180px;
-  padding: 15px 0;
+  padding: 15px 30px;
   background-color: #10c9c3;
   text-transform: uppercase;
   color: white;
@@ -32,10 +34,15 @@ a{
   outline: none;
   cursor: pointer;
 }
+
+.button:hover{
+  background-color: #0EB4AF;
+}
+
 .scrollup{
   display: none;
-  width: 7vmin;
-  height: 7vmin;
+  width: 10vmin;
+  height: 10vmin;
   position: fixed;
   right: 20px;
   bottom: 0;
@@ -56,6 +63,7 @@ a{
 
 /*////////////////////////////////////HEADER//////////////////////////////////*/
 .header {
+  min-height: 100vh;
   width: 100%;
   background-image: url("../img/banner2.jpg");
   overflow: hidden;
@@ -69,6 +77,10 @@ a{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 180px;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .menu-burger {
@@ -102,7 +114,7 @@ a{
 }
 .content h2{
 	color: #1d1d1d;
-  font-family: Montserrat;
+  font-family: "Geologica";
   font-size: 38px;
   font-weight: 500;
   line-height: 48px;
@@ -110,7 +122,7 @@ a{
 }
 .content p{
 	color: #787878;
-  font-family: "Nunito Sans";
+  font-family: "Geologica";
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -119,7 +131,7 @@ a{
 
 /*/////////////////////////////////////////ABOUT///////////////////////////////////////////*/
 .about {
-	padding: 97px 0 92px;
+	padding: 60px 0;
 }
 
 .about__wrapper {
@@ -130,7 +142,7 @@ a{
 
 .about h2{
 	color: #191919;
-  font-family: Montserrat;
+  font-family: "Geologica";
   font-size: 30px;
   font-weight: 500;
   line-height: 60px;
@@ -139,7 +151,7 @@ a{
 
 .about p{
 	color: #787878;
-  font-family: "Nunito Sans";
+  font-family: "Geologica";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -195,7 +207,7 @@ a{
 .progress__wrapper h2{
 	margin-bottom: 40px;
 	color: #171717;
-  font-family: Montserrat;
+  font-family: "Geologica";
   font-size: 30px;
   font-weight: 500;
 }
@@ -1071,7 +1083,7 @@ a{
   position: absolute;
   color: white;
   font-size: 48px;
-  font-family: "icomoon";
+  font-family: "Geologica";
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -1088,6 +1100,9 @@ a{
   cursor: pointer;
 }
 
+.load__works:hover{
+  background-color: #dcdcdc;
+}
 .btn__wrapper{
   display: flex;
   justify-content: space-between;
@@ -1107,14 +1122,14 @@ a{
 }
 .work-proccess h2{
   color: #191919;
-  font-family: Montserrat;
+  font-family: "Geologica";
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 40px;
 }
 .work-proccess  p{
   color: #787878;
-  font-family: "Nunito Sans";
+  font-family: "Geologica";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1266,7 +1281,7 @@ q:after {
 .new-project-form h2{
   text-align: center;
   color: #191919;
-  font-family: Montserrat;
+  font-family: "Geologica";
   font-size: 30px;
   font-weight: 500;
   line-height: 60px;
@@ -1276,7 +1291,7 @@ q:after {
 .new-project-form p{
   text-align: center;
   color: #787878;
-  font-family: "Nunito Sans";
+  font-family: "Geologica";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1286,6 +1301,8 @@ q:after {
 .order-form {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
 }
 .order-form__input,
 .order-form__textarea{
@@ -1372,7 +1389,7 @@ footer .container {
   .menu-burger {
     display: inline-block;
     transition: transform .5s;
-    position: relative;
+/*    position: relative;*/
   }
 
   .menu-burger span {
@@ -1420,11 +1437,13 @@ footer .container {
 
   .menu.adaptive .burger-strip-2{
     position: absolute;
+    right: 2%;
     transform: rotate(45deg);
   }
 
   .menu.adaptive .burger-strip-3{
     position: absolute;
+    right: 2%;
     transform: rotate(-45deg);
   }
   .menu.adaptive a:hover{
@@ -1492,11 +1511,13 @@ footer .container {
   }
   /*////////////////////////////////CLIENTS//////////////////////////////////////*/
   .clients_wrapper{
+    justify-content: center;
     flex-wrap: wrap;
     padding: 40px 0;
   }
   .clients_wrapper img{
     margin-bottom: 5vh;
+    margin-right: 5vw;
   }
 
   /*////////////////////////////FORM/////////////////////////////////*/
