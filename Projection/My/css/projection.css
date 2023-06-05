@@ -68,7 +68,7 @@ header .container{
 }
 
 .header .navbar a:hover{
-	color: #6cc091;
+	text-decoration: underline;
 }
 /*/////////////////////Menu////////////////////////////////////////*/
 .menu-btn {
