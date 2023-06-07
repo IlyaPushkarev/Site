@@ -80,7 +80,7 @@
 	/* Landscape phones and portrait tablets */
 	@media (max-width: 767px) {
 		.container {
-			padding: 10px 0;
+			padding: 10px;
 		}
 		h2 + p{margin-bottom: 40px;}
 		.header{background : #eff0f2;}
@@ -340,7 +340,7 @@
 
 		.worker-photo {
 			height: 65vw;
-			width: 45vh;
+			width: 30vh;
 		}
 		.worker-photo img{
 			max-height: 100%;
