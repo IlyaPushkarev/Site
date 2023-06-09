@@ -9,7 +9,6 @@
   "author": "Vadim Prokopchuk",
   "license": "ISC",
   "devDependencies": {
-    "animate.css": "^4.1.1",
     "browser-sync": "^2.26.5",
     "del": "^5.0.0",
     "gulp": "^4.0.2",
@@ -18,10 +17,10 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.1",
     "gulp-uglify": "^3.0.2",
-    "normalize.css": "^8.0.1",
-    "sass": "^1.62.1"
+    "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "slick-carousel": "^1.8.1"
   }
 }
