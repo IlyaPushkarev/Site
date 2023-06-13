@@ -132,6 +132,7 @@
 	right:80px;
 	cursor: pointer;
 	z-index: 4;
+	opacity: .5;
 } 
 
 .slider-arrows_left{
@@ -402,12 +403,86 @@
 .surf-location{
 	position: absolute;
 	top: 30%;
-    right: 3%;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+	right: 3%;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
 	font-size: 18px;
 	line-height: 22px;
 	letter-spacing: 8px;
 }
 
+.travel{
+	.slider-arrows{
+		top: 115px;
+	}
+}
+
+.travel-slider__item-wrap{
+	background-image: url("../img/cocktail.png");
+	background-repeat: no-repeat;
+	background-position: right 150%;
+}
+.travel-slider__item-head{
+	display: flex;
+	justify-content: space-between;
+	margin-top: -150px;
+	.travel-slider__item-title-box{
+		padding: 0 0 77px 135px;
+	}
+	&__title{
+		font-weight: 800;
+		font-size: 40px;
+		margin: 0;
+		span{
+			font-weight: 300;
+		}
+		img{
+			display: inline-block;
+			margin-left: 26px;
+		}
+	}
+	&__img{
+		margin-top: -150px;
+	}
+}
+
+.travel-slider__item-content{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 135px;
+	margin-bottom: 66px;
+}
+
+.travel-slider__item-content__item{
+	display: flex;
+	align-items: flex-start;
+}
+
+.content__item-title{
+	writing-mode: tb;
+	transform: rotate(180deg);
+	margin: 0 18px 0 0;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 8px;
+	opacity: 0.5;
+}
+
+.content__item-description{
+	margin: 0;
+	font-weight: 800;
+	font-size: 40px;
+	span{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 36px;
+		letter-spacing: 5.25px;
+		opacity: .75
+	}
+}
+
+.travel .main-btn{
+	display: block;
+	text-align: center;
+}
 @import "media";

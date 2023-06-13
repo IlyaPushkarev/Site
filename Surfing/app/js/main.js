@@ -24,5 +24,10 @@ $(function(){
 		arrows: false,
 		focusOnSelect: true,
 		adaptiveHeight: true,
-	})
+	});
+
+	$(".travel-slider").slick({
+		prevArrow: '<img class="slider-arrows slider-arrows_left" src="img/arrow-left.svg" alt="">',
+		nextArrow: '<img class="slider-arrows slider-arrows_right" src="img/arrow-right.svg" alt="">'
+		})
 });
