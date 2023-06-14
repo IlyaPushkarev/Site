@@ -417,12 +417,30 @@
 	background-position: right 109%;	
 }
 
+.travel .slider__item-head__title{
+	img{
+		margin-left: 26px;
+	}
+}
+
 .sleep{
 	background-image: url("../img/frangipani.png");
 	background-repeat: no-repeat;
 	background-position: right 100%;	
 }
 
+.sleep .slider__item-head__title{
+	ul{
+		margin-left: 26px;
+	}
+	img{
+		margin-left: -20px;
+	}
+}
+
+.sleep .content__item-description{
+	position: relative;
+}
 .travel,
 .sleep{
 	padding: 100px 0;
