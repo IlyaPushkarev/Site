@@ -26,15 +26,12 @@ $(function(){
 		adaptiveHeight: true,
 	});
 
-	$(".travel-slider").slick({
+	$(".travel-slider, .sleep-slider, .shop-slider").slick({
 		prevArrow: '<img class="slider-arrows slider-arrows_left" src="img/arrow-left.svg" alt="">',
 		nextArrow: '<img class="slider-arrows slider-arrows_right" src="img/arrow-right.svg" alt="">'
 	});
 
-	$(".sleep-slider").slick({
-		prevArrow: '<img class="slider-arrows slider-arrows_left" src="img/arrow-left.svg" alt="">',
-		nextArrow: '<img class="slider-arrows slider-arrows_right" src="img/arrow-right.svg" alt="">'
-	});
+	
 
 	$('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.svg" alt=""></div><div class="quantity-button quantity-down"><img src="img/minus.svg" alt=""></div></div>').insertAfter('.quantity input');
 	$('.quantity').each(function() {
@@ -70,15 +67,19 @@ $(function(){
 	});
 
 	$(".quantity-button").on("click", function(){
-	const nightCount = $(".nights").val();
-	const costPerNight = $(".total").data("night");
-	const guestCount = $(".guests").val();
-	const costPerGuest = $(".total").data("guest")
+		const nightCount = $(".nights").val();
+		const costPerNight = $(".total").data("night");
+		const guestCount = $(".guests").val();
+		const costPerGuest = $(".total").data("guest")
 
-	let total =  nightCount * costPerNight + (guestCount - 1) * costPerGuest;
-	const currency = "USD";
+		let total =  nightCount * costPerNight + (guestCount - 1) * costPerGuest;
+		const currency = "USD";
 
-	$(".total").html("$" + total + " " + currency)	;
+		$(".total").html("$" + total + " " + currency)	;
+	})
+
+	$(".product-box__circle").on('click', function(){
+		$(this).parent().toggleClass("active")
 	})
 
 });

@@ -115,6 +115,7 @@ body{
 	display: inline-block;
 	position: relative;
 	padding-right: 25px;
+	margin-bottom: 8px;
 	font-size: 22px;
 	line-height: 32px;
 	letter-spacing: 7.33333px;
@@ -245,6 +246,10 @@ body{
 	vertical-align: middle;
 	li{
 		display: inline-block;
+
+		img{
+			margin-left: -20px;
+		}
 	}
 }
 
@@ -271,8 +276,8 @@ input[type=number]
 	display: inline-block;
 	padding-left: 20px;
 	font-weight: 800;
-    font-size: 40px;
-    color: #fff;
+	font-size: 40px;
+	color: #fff;
 	background-color: transparent;
 	border: none;
 }
